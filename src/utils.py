@@ -19,13 +19,7 @@ def predict_consejo():
 
 
 def predict_imagen(imagen):
-    # Añadir una dimensión extra (lote)
-    imagen = imagen.reshape((1, 32, 32, 3))
-    # Cargar el modelo desde el archivo
-    model = load_model('models/modelo_cifar_10.keras')
-    # Realizar la predicción
-    predictions = model.predict(imagen)
-    predicted_class = tf.argmax(predictions[0]).numpy()
+       
     # Obtener el nombre de la clase predicha
     class_names = ['Vas super guap@', 'Pichi pichá', 'Fatal de la muerte', 'No te atrevas a salir de casa']
     return random.choice(class_names)
