@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: url('https://www.mdzol.com/u/fotografias/m/2022/11/15/f850x638-1316830_1394319_5050.jpg') repeat center center fixed;
+        background: url('https://www.mdzol.com/u/fotografias/m/2022/11/15/f850x638-1316830_1394319_5050.jpg') no-repeat center center fixed;
         background-size: contain;
     }
     </style>
