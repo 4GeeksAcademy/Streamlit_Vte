@@ -1,5 +1,17 @@
 import streamlit as st
 from utils import check_colores
+# Cambiar color de fondo
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f0f2f6;  /* Aquí puedes poner cualquier color */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Título de la aplicación
 st.title('¿Vas combinado?')
