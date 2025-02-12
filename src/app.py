@@ -2,8 +2,6 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 import pickle
 import streamlit as st
-from tensorflow.keras.models import load_model
-import tensorflow as tf
 import numpy as np
 
 def main():
