@@ -3,7 +3,7 @@ from streamlit_extras.switch_page_button import switch_page
 import pickle
 import streamlit as st
 import numpy as np
-import pred_consejo
+
 
 def main():
     st.title('Bienvenido al portal "Ponte guap@"')
