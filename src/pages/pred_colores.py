@@ -1,6 +1,16 @@
 import streamlit as st
 from utils import check_colores
-
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: url('https://cache.marieclaire.fr/data/photo/w1000_ci/60/meryl-streep-le-diable-s-habille-en-prada.webp') no-repeat center center fixed;
+        background-size: contain;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Título de la aplicación
 st.title('¿Vas combinado?')
 

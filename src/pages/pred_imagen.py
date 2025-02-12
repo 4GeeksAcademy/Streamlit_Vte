@@ -2,6 +2,19 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 from utils import predict_imagen
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLX0tM0c0ugduxnWVRTi01jT1DqVBKi26HBIg0m-QqA5rp5BpM7KFIFM8AmgsN_q2asnRBzi3ZuwLcNWEm2HjchuJSKNyr_mcUh7gzaxy4uMUmL3ncRmWZjL_IWtbT9S4bJILY90KEuWE/s1600/el-estilo-de-rafa-mora-9_1_.jpg') no-repeat center center fixed;
+        background-size: contain;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 # Título de la aplicación
 st.title('¿Vas combinad@?')
