@@ -1,13 +1,49 @@
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
-import pandas as pd
+import pickle
+import streamlit as st
+from tensorflow.keras.models import load_model
+import tensorflow as tf
+import numpy as np
 
-# load the .env file variables
-load_dotenv()
+def predict_consejo(data):
+    # Coge una frase del string aleatoria
+    consejos = ['Vístete según tu talla, no la que deseas tener.',
+                 'El negro adelgaza, pero no hace milagros.', 
+                 'Si dudas, ponte jeans; nunca fallan.',  
+                 "Las chanclas son para la playa, no para la ciudad.",
+                 "Las marcas no hacen estilo, tu actitud sí.",
+                 "Combinar estampados es arte, o un desastre.",
+                 "Zapatos limpios, porque todos los miran sin que lo notes.",
+                 "La moda pasa, las fotos quedan. Piénsalo."]
 
+    return random.choice(consejos)
 
-def db_connect():
-    import os
-    engine = create_engine(os.getenv('DATABASE_URL'))
-    engine.connect()
-    return engine
+def predict_imagen(imagen):
+    # Añadir una dimensión extra (lote)
+    imagen = imagen.reshape((1, 32, 32, 3))
+    # Cargar el modelo desde el archivo
+    model = load_model('models/modelo_cifar_10.keras')
+    # Realizar la predicción
+    predictions = model.predict(imagen)
+    predicted_class = tf.argmax(predictions[0]).numpy()
+    # Obtener el nombre de la clase predicha
+    class_names = ['Vas super guap@', 'Pichi pichá', 'Fatal de la muerte', 'No te atrevas a salir de casa']
+    return random.choice(class_names)
+
+def check_colores(color1,color2):
+    def check_colores(color1, color2):
+    combinan = [("Rojo", "Negro"), ("Azul", "Blanco"), ("Verde", "Amarillo"), ("Negro", "Blanco")]
+    
+    if color1 and color2:
+        if (color1, color2) in combinan or (color2, color1) in combinan:
+            st.success(f"¡Buena elección! {color1} y {color2} combinan bien.")
+        else:
+            st.warning(f"{color1} y {color2} no combinan muy bien.")
+
+def check_client_id(client_id):
+    # Simulación
+    # Cargar credenciales para la BBDD de la empresa y consultar si el identificador del cliente está activo 
+    api_key = st.secrets["DB_USERNAME"]
+    ls_ids = [123,12345,12345678]
+    return True if client_id in ls_ids else False
+    
+print(f"TensorFlow version: {tf.__version__}")
