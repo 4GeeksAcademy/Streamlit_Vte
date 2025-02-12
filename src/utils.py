@@ -1,7 +1,6 @@
 import pickle
 import streamlit as st
 from tensorflow.keras.models import load_model
-import tensorflow as tf
 import numpy as np
 import random
 
