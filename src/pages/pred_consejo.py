@@ -1,7 +1,6 @@
 import streamlit as st
-
 import numpy as np
-from utils import predict_imagen
+from utils import predict_consejo
 
 # Título de la aplicación
 st.title('¿Quieres un consejo?')

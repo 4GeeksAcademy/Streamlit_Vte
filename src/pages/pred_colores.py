@@ -1,4 +1,5 @@
 import streamlit as st
+from utils import check_colores
 
 # Título de la aplicación
 st.title('¿Vas combinado?')
