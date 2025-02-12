@@ -37,6 +37,8 @@ def check_colores(color1,color2):
     if color1 and color2:
         if (color1, color2) in combinan or (color2, color1) in combinan:
             st.success(f"¡Buena elección! {color1} y {color2} combinan bien.")
+        elif color1==color2:
+            st.warning("Sé un poquitín mas original")
         else:
             st.warning(f"{color1} y {color2} no combinan muy bien.")
 
