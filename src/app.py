@@ -29,4 +29,3 @@ def route_prediction(opcion):
 if __name__ == "__main__":
     main()
 
-
