@@ -39,11 +39,11 @@ def check_colores(color1,color2):
         else:
             st.warning(f"{color1} y {color2} no combinan muy bien.")
 
-def check_client_id(client_id):
+#def check_client_id(client_id):
     # Simulación
     # Cargar credenciales para la BBDD de la empresa y consultar si el identificador del cliente está activo 
     api_key = st.secrets["DB_USERNAME"]
-    ls_ids = [123,12345,12345678]
-    return True if client_id in ls_ids else False
+    #ls_ids = [123,12345,12345678]
+    #return True if client_id in ls_ids else False
     
-print(f"TensorFlow version: {tf.__version__}")
+#print(f"TensorFlow version: {tf.__version__}")
