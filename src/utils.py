@@ -3,8 +3,9 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 import tensorflow as tf
 import numpy as np
+import random
 
-def predict_consejo(data):
+def predict_consejo():
     # Coge una frase del string aleatoria
     consejos = ['Vístete según tu talla, no la que deseas tener.',
                  'El negro adelgaza, pero no hace milagros.', 
@@ -16,6 +17,8 @@ def predict_consejo(data):
                  "La moda pasa, las fotos quedan. Piénsalo."]
 
     return random.choice(consejos)
+
+
 
 def predict_imagen(imagen):
     # Añadir una dimensión extra (lote)
