@@ -31,7 +31,7 @@ def predict_imagen(imagen):
     return random.choice(class_names)
 
 def check_colores(color1,color2):
-    def check_colores(color1, color2):
+    
     combinan = [("Rojo", "Negro"), ("Azul", "Blanco"), ("Verde", "Amarillo"), ("Negro", "Blanco")]
     
     if color1 and color2:
