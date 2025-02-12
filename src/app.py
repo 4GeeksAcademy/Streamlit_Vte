@@ -4,6 +4,19 @@ import pickle
 import streamlit as st
 import numpy as np
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7FimwPty6Ci2Lq_YzVCZ08TQbIn4_bHejQ&s') no-repeat center center fixed;
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 def main():
     st.title('Bienvenido al portal "Ponte guap@"')
