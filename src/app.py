@@ -8,8 +8,8 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ7FimwPty6Ci2Lq_YzVCZ08TQbIn4_bHejQ&s') repeat center center fixed;
-        background-size: cover;
+        background: url('https://www.mdzol.com/u/fotografias/m/2022/11/15/f850x638-1316830_1394319_5050.jpg') repeat center center fixed;
+        background-size: contain;
     }
     </style>
     """,
