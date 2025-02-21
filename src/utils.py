@@ -16,8 +16,6 @@ def predict_consejo():
 
     return random.choice(consejos)
 
-
-
 def predict_imagen(imagen):
        
     # Obtener el nombre de la clase predicha
